@@ -1,5 +1,6 @@
+# Author: Okorie Rehoboth
+# Sept 23 2021
 import math
-
 import cs1lib
 from provided import SearchSolution
 from provided.FoxProblem import FoxProblem
@@ -68,7 +69,7 @@ def solution_visualizer(solution: SearchSolution):
     cs1lib.start_graphics(draw, width=800, height=800, framerate=1)
 
 
-problem331 = FoxProblem((13, 13, 1), boat_capacity=7)
+problem331 = FoxProblem((3, 3, 1), boat_capacity=2)
 sol = bfs_search(problem331)
 print(sol)
 solution_visualizer(sol)

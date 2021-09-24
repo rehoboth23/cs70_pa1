@@ -1,12 +1,9 @@
+# Author: Okorie Rehoboth
+# Sept 23 2021
 from collections import deque
 from typing import Union
-
 from SearchSolution import SearchSolution
 from provided.FoxProblem import SearchProblem
-
-
-# you might find a SearchNode class useful to wrap state objects,
-#  keep track of current depth for the dfs, and point to parent nodes
 
 
 class SearchNode:
@@ -48,7 +45,6 @@ def bfs_search(search_problem: SearchProblem) -> SearchSolution:
             goal_state = current_state  # st goal state when found
             break
         successors = search_problem.get_successors(current_state.state)  # generate successors
-
         for s in successors:
             if s not in seen:
                 make_node_add_fringe(fringe, s, current_state)
@@ -58,7 +54,6 @@ def bfs_search(search_problem: SearchProblem) -> SearchSolution:
     while goal_state is not None:
         sol.path.append(goal_state.state)
         goal_state = goal_state.parent
-
     sol.path = sol.path[::-1]  # reverse solution path to start from start state
     return sol
 

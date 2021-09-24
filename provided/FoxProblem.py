@@ -1,3 +1,6 @@
+# Author: Okorie Rehoboth
+# Sept 23 2021
+
 # generic problem type that can be applied to search problems.I used this for type safe coding
 class SearchProblem:
     def __init__(self, start_state, goal_state):
